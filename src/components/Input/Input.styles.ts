@@ -21,8 +21,9 @@ underlineColorAndroid: 'transparent'
     color: ${theme.colors.gray_100};
     border-radius: 8px;
     border-style: solid;
-    border-width: 2px;
-    border-color: ${isFocused ? theme.colors.purple_dark : theme.colors.gray_300};
+    border-width: 1px;
+    border-color: ${isFocused ? theme.colors.purple_dark : theme.colors.gray_700};
+    background-color: ${theme.colors.gray_500};
     `}
 
 
