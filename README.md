@@ -1,5 +1,10 @@
 # TODO LIST
 
+![GitHub repo size](https://img.shields.io/github/repo-size/maykonsousa/todoListMobile)
+![GitHub language count](https://img.shields.io/github/languages/count/maykonsousa/todoListMobile)
+![GitHub forks](https://img.shields.io/github/forks/maykonsousa/todoListMobile)
+
+
 > Este é um aplicativo simples de TODO List proposto no desafio 01 do curso de React Native [Rocketseat](http://app.ropcketseat.com.br)
 
 <div
@@ -15,26 +20,25 @@
 ## Detalhes do aplicativo
 
 - A ideia do desafio foi a construição de um aplicativo mobile multiplataforma capaz de gerenciar tarefas a executar.  
-Com isso pude fixar alguns conceito de componentização e gerenciamento de estado
+Com isso pude fixar alguns conceito de componentização e gerenciamento de estado, renderização condicional e hooks.
 
 ## 🚀 Melhorias implementadas
-- [ ] - Conectar com uma api própria ou um cms
-- [ ] - Permitir o usuário criar eventos
-- [ ] - Fornecer uma landing page onde o usuário obtenha informações do evento e possa se inscrever
-- [ ] - Enviar um email para o usuário com o QRCode do ingresso do evento que ele se increveu
-- [ ] - Incluir uma tela gerencial onde o produtor do evento possa ver a quantidade de inscritos
-- [ ] - incluir uma tela de Check-in onde seja possivel ler o QR code do convidado e validar a sua presença no evento
+- [x] - Dados salvos no Storage do dispositivo
+- [x] - Estilização com styled components
+- [x] - Biblioteca de icones phosphor icons
+- [x] - Alertas a cada interação
+
 
 ## 💻 Como usar o projeto
 Para gerar uma cópia do projeto e implementar as suas melhorias, esteja em um computador com Node Js instalado e siga as etapas abaixo:
 
 1  clone o projeto com o comando 
 ```
-git clone https://github.com/maykonsousa/ignite_rm_imhere
+git clone https://github.com/maykonsousa/todoListMobile
 ``` 
 2  Acesse o projeto pelo terminal com o comando 
 ```
-cd ignite_rn_imhere
+cd todoListMobile
 ```  
 3  Instale as dependências necessárias com o comando
 ```
@@ -51,7 +55,7 @@ npm run android
 [NodeJS](https://nodejs.org/en/download)  
 [Expo](https://expo.dev/)  
 [Android Studio](https://developer.android.com/studio/install?hl=pt-br)  
-[Figma do projeto](https://www.figma.com/file/AXOlKzH6ZUmKXWqfQXquhe/Chapter-I---Im-Here?type=design&node-id=0%3A1&mode=design&t=2D2quWd8YnSN11KK-1)
+[Figma do projeto](https://www.figma.com/file/9oFvFCof9KMaxDsH9IhPjg/ToDo-List-%E2%80%A2-Mobile)
 
 
 ## 🧑‍💻 Maykon Sousa
