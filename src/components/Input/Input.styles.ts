@@ -3,6 +3,7 @@ import styled, {css} from "styled-components/native";
 
 export interface InputProps extends TextInputProps {
     isFocused?: boolean;
+    inputRef?: React.RefObject<TextInput>;
 }
 
 export const InputContainer = styled(TextInput).attrs(({theme})=>({
