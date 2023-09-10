@@ -10,7 +10,7 @@ export const createNewTask = async (task:string) => {
         const tasks = await getAllTasks();
         const taskAlreadyExists = tasks.find((taskDTO:TaskDTO)=>taskDTO.text === task);
         if(taskAlreadyExists) {
-            throw new AppError("Task already exists", 400);
+            throw new AppError("Já existe uma Task com esse nome", 400);
         }
 
         const newTask:TaskDTO = {
@@ -23,6 +23,7 @@ export const createNewTask = async (task:string) => {
         
 
     } catch (error) {
+        console.log("Falha no servico de criar nova task");
         throw error;
     }
     

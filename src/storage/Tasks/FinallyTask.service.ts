@@ -20,6 +20,7 @@ export const finallyTask = async (id:string) => {
 
     await AsyncStorage.setItem(TASK_COLLECTION, JSON.stringify(taksUpdated));
     } catch (error) {
+        console.log("Falha no servico de finalizar task");
         throw error;
     }
 

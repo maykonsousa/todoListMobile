@@ -18,6 +18,7 @@ export const getAllTasks = async ():Promise<TaskDTO[]> => {
 
        return sortTasks;
     } catch (error) {
+        console.log("Falha no servico de pegar todas as tasks");
         throw error;
     }
 };
