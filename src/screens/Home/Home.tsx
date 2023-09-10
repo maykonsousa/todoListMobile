@@ -11,12 +11,15 @@ import { Alert, TextInput } from 'react-native'
 import { FlatList } from 'react-native'
 import { createNewTask } from '@storage/Tasks/CreateNewTask.service'
 import { AppError } from '@utils/AppError'
+import { useTheme } from 'styled-components/native'
+import { Resume } from '@components/Resume'
 
 export const Home = () => {
   const [tasks, setTasks] = React.useState<TaskDTO[]>([])
   const [taskText, setTaskText] = React.useState('')
   const [isRefetch, setIsRefetch] = React.useState(false)
   const inputRef = useRef<TextInput>(null)
+  const theme = useTheme()
 
   const FetchAllTasks = async () => {
     try {
@@ -36,6 +39,11 @@ export const Home = () => {
   }
 
   const handleAddTask = async() => {
+    if (taskText.trim() === '') {
+      return Alert.alert('Erro', 'Digite uma tarefa')
+      
+    }
+
    try {
      await createNewTask(taskText)
       Alert.alert('Sucesso', 'Tarefa criada com sucesso')
@@ -71,6 +79,7 @@ export const Home = () => {
             onPress={handleAddTask}
            />
            </FormContainer>
+           <Resume tasks={tasks} />
           <FlatList 
             data={tasks}
             keyExtractor={item => `${item.id}`}
@@ -86,7 +95,12 @@ export const Home = () => {
             contentContainerStyle={
               [
                 {paddingBottom: 100},
-                tasks.length === 0 && {flex: 1, justifyContent: 'center'}
+                tasks.length === 0 && {
+                  flex: 1, 
+                  justifyContent: 'center',
+                  borderTopColor: theme.colors.gray_300,
+                  borderTopWidth: 1
+                }
               ]
             }
             showsVerticalScrollIndicator={false}
